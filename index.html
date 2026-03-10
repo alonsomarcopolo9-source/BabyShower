@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>Baby Shower Valentina ✨</title>
+
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧸</text></svg>">
+    
+    <!-- Fuentes modernas -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="invitation-card">
+        <div class="image-container">
+            <img src="/img/babyshower.png" alt="Baby Shower Valentina">
+        </div>
+        
+        <div class="content">
+            <div class="baby-badge">
+                <span>
+                    <span>🎀</span>
+                    Bienvenida
+                    <span>🎀</span>
+                </span>
+            </div>
+            
+            <h1>Nuestra princesa</h1>
+            <div class="baby-name"><em>Eliana Constanza</em></div>
+            
+            <div class="message-card">
+                <p>La familia está creciendo y nuestro amor también.</p>
+                <p>Con inmensa alegría, queremos invitarte a celebrar</p>
+                <p>la llegada de nuestra pequeña princesa.</p>
+                <p>Tu presencia será nuestro mejor regalo.</p>
+            </div>
+            
+            <div class="details-grid">
+                <div class="detail-card">
+                    <span class="detail-icon">📅</span>
+                    <div>
+                        <h3>Fecha</h3>
+                        <p>Sábado 02 de Mayo 2026</p>
+                    </div>
+                </div>
+                
+                <div class="detail-card">
+                    <span class="detail-icon">⏰</span>
+                    <div>
+                        <h3>Hora</h3>
+                        <p>4:00 PM</p>
+                    </div>
+                </div>
+                
+                <div class="detail-card">
+                    <span class="detail-icon">📍</span>
+                    <div>
+                        <h3>Lugar</h3>
+                        <p>"El Jardín"</p>
+                        <p>Av Aleta 110, Col del Mar, Tláhuac, 13270 Ciudad de México, CDMX</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="music-section">
+                <button id="musicBtn" class="music-btn playing">
+                    <span>🎵</span>
+                    <span id="musicText">Pausar música</span>
+                </button>
+            </div>
+            
+            <div class="attendance-section">
+                <div class="attendance-tag">
+                    ¿Nos acompañas?
+                </div>
+                
+                <button id="acceptBtn" class="accept-btn">
+                    Confirmar asistencia
+                </button>
+            </div>
+            
+            <div class="whatsapp-wrapper">
+                <a href="#" id="whatsappShare" class="whatsapp-btn" target="_blank">
+                    <span>📱</span>
+                    Compartir invitación
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" id="closeModal">✕</span>
+            <h2>Confirmar asistencia</h2>
+            
+            <form id="attendanceForm">
+                <div class="form-group">
+                    <label for="name">Nombre completo</label>
+                    <input type="text" id="name" name="name" placeholder="Ej: María García López" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Teléfono</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Ej: 55 1234 5678 a10 dígitos" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="attendees">Número de asistentes</label>
+                    <input type="number" id="attendees" name="attendees" min="1" max="10" placeholder="Ej: 2" required>
+                </div>
+                
+                <button type="submit" class="submit-form">Confirmar</button>
+                
+                <div id="successMessage" class="success-message">
+                    ¡Gracias por confirmar! Te esperamos.
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <audio id="bgMusic" loop>
+        <source src="/multimedia/Tarzan - En mi corazón vivirás.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

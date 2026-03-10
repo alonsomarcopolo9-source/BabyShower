@@ -1,0 +1,5 @@
+# Ocultar archivos de configuración
+config.js
+.env
+*.config.js
+!sample.config.js
